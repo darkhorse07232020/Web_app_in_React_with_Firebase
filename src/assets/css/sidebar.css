@@ -3,3 +3,17 @@
     border-radius: 0 5rem 5rem 0;
     background-color: #172b4c;
 }
+
+.custom-sidebar .avatar {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.custom-sidebar .badge-for-avatar {
+    width: 15px;
+    min-height: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
