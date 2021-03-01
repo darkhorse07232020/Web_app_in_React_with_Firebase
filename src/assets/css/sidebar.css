@@ -37,3 +37,7 @@
     bottom: 20px;
     width: 90%;
 }
+
+.nav-link {
+    padding: .3rem 1rem !important;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
-import {Nav, Image, Container, Row, Col} from 'react-bootstrap'
-import AddButton from '../components/add_button'
-import AppButton from '../components/app_button'
+import {Nav, Image, Container, Row} from 'react-bootstrap'
+import AddButton from './add_button'
+import AppButton from './app_button'
 
 import LogoImage from '../assets/images/PavleuLogoYellow.png'
 import AvatarImage from '../assets/images/avatar.png'
@@ -13,7 +13,7 @@ import CalendarIcon from '../assets/images/icons/calendar.png'
 import AndroidIcon from '../assets/images/icons/android_white.png'
 import AppleIcon from '../assets/images/icons/apple_white.png'
 import '../assets/css/sidebar.css'
-import Accordion from '../components/accordion'
+import Accordion from './accordion'
 import { Link } from 'react-router-dom'
 
 function Sidebar() {
@@ -23,10 +23,10 @@ function Sidebar() {
             // onSelect={selectedKey => alert(`selected ${selectedKey}`)}
         >
             <div className="sidebar-sticky"></div>
-            <Container>
+            <div className="py-4 px-3">
                 <Image src={LogoImage} fluid width = "100px" height = "100px" />
-            </Container>
-            <Row className="pl-3">
+            </div>
+            <Row className="pl-3 pb-2">
                 <div className="avatar">
                     <Image src={AvatarImage} fluid roundedCircle className="bg-white"></Image>
                     <div
@@ -67,8 +67,8 @@ function Sidebar() {
             </Accordion>
 
             <div className="d-flex mobile-link mx-auto justify-content-center">
-                <Image src={AndroidIcon} fluid width={60} height={60} className="mx-2"></Image>
-                <Image src={AppleIcon} fluid width={60} height={60} className="mx-2"></Image>
+                <Image src={AndroidIcon} fluid width={40} height={40} className="mx-2"></Image>
+                <Image src={AppleIcon} fluid width={40} height={40} className="mx-2"></Image>
             </div>
         </Nav>
     )
