@@ -13,5 +13,37 @@ code {
 }
 
 .text-20 {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+}
+.welcome-header {
+  background-color: #96cdf6;
+}
+.content-body {
+  margin-left: 350px;
+}
+
+.header-users {
+  right: 30px;
+  border-radius: 7px;
+  background-color: #f86d4a;
+  width: 60px;
+}
+
+.header-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background-color: aqua;
+}
+.badge-for-avatar {
+  width: 12px;
+  min-height: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

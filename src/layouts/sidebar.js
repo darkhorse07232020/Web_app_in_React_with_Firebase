@@ -17,7 +17,7 @@ import '../assets/css/sidebar.css'
 
 function sidebar() {
     return (
-        <Nav className="d-none d-md-block sidebar p-3 custom-sidebar"
+        <Nav className="d-none d-md-block sidebar p-3 custom-sidebar position-absolute"
             activeKey="/home"
             // onSelect={selectedKey => alert(`selected ${selectedKey}`)}
         >
@@ -39,7 +39,7 @@ function sidebar() {
                 </Col>
             </Row>
             <Nav.Item>
-                <Nav.Link href="/home" className="pt-4"><AddButton>Create Task</AddButton></Nav.Link>
+                <Nav.Link className="pt-4"><AddButton>Create Task</AddButton></Nav.Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link><TriButton>Active tasks</TriButton></Nav.Link>
@@ -67,10 +67,10 @@ function sidebar() {
                 <Nav.Link className="pt-4"><TriButton font={25}>Settings</TriButton></Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link className="text-white m-0 text-20 ml-2"><b>Edit profile</b></Nav.Link>
-                <Nav.Link className="text-white m-0 text-20 ml-2"><b>Transaction history</b></Nav.Link>
-                <Nav.Link className="text-white m-0 text-20 ml-2"><b>Logout</b></Nav.Link>
-                <Nav.Link className="text-white m-0 text-20 ml-2"><b>Help!</b></Nav.Link>
+                <Nav.Link className="text-white text-20 ml-2"><b>Edit profile</b></Nav.Link>
+                <Nav.Link className="text-white text-20 ml-2"><b>Transaction history</b></Nav.Link>
+                <Nav.Link className="text-white text-20 ml-2"><b>Logout</b></Nav.Link>
+                <Nav.Link className="text-white text-20 ml-2"><b>Help!</b></Nav.Link>
             </Nav.Item>
 
             <div className="d-flex mobile-link mx-auto justify-content-center">
