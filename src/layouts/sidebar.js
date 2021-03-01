@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Nav, Image, Container, Row, Col} from 'react-bootstrap'
 import AddButton from '../components/add_button'
 import TriButton from '../components/tri_button'
@@ -14,8 +14,10 @@ import CalendarIcon from '../assets/images/icons/calendar.png'
 import AndroidIcon from '../assets/images/icons/android_white.png'
 import AppleIcon from '../assets/images/icons/apple_white.png'
 import '../assets/css/sidebar.css'
+import Accordion from '../components/accordion'
 
-function sidebar() {
+function Sidebar() {
+
     return (
         <Nav className="d-none d-md-block sidebar p-3 custom-sidebar position-absolute"
             activeKey="/home"
@@ -41,37 +43,30 @@ function sidebar() {
             <Nav.Item>
                 <Nav.Link className="pt-4"><AddButton>Create Task</AddButton></Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-                <Nav.Link><TriButton>Active tasks</TriButton></Nav.Link>
-                <Nav.Link><TriButton>Inactive tasks</TriButton></Nav.Link>
-            </Nav.Item>
 
-            <Nav.Item>
-                <Nav.Link className="pt-4"><TriButton font={25}>Apps</TriButton></Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
+            <Accordion title="Active tasks">
+            </Accordion>
+
+            <Accordion title="Inactive tasks">
+            </Accordion>
+
+            <Accordion title="Apps">
                 <Nav.Link><AppButton image={StrataIcon}>Pavleu Strata</AppButton></Nav.Link>
                 <Nav.Link><AppButton image={AudioIcon}>Pavleu audio</AppButton></Nav.Link>
                 <Nav.Link><AppButton image={DriveIcon}>Pavleu drive</AppButton></Nav.Link>
                 <Nav.Link><AppButton image={CalendarIcon}>Pavleu calendar</AppButton></Nav.Link>
-            </Nav.Item>
+            </Accordion>
 
-            <Nav.Item>
-                <Nav.Link className="pt-4"><TriButton font={25}>Clique</TriButton></Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
+            <Accordion title="Clique">
                 <Nav.Link className="ml-2"><AddButton>Add team</AddButton></Nav.Link>
-            </Nav.Item>
+            </Accordion>
 
-            <Nav.Item>
-                <Nav.Link className="pt-4"><TriButton font={25}>Settings</TriButton></Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link className="text-white text-20 ml-2"><b>Edit profile</b></Nav.Link>
-                <Nav.Link className="text-white text-20 ml-2"><b>Transaction history</b></Nav.Link>
-                <Nav.Link className="text-white text-20 ml-2"><b>Logout</b></Nav.Link>
-                <Nav.Link className="text-white text-20 ml-2"><b>Help!</b></Nav.Link>
-            </Nav.Item>
+            <Accordion title="Settings">
+                <Nav.Link className="text-white text-20 ml-2">Edit profile</Nav.Link>
+                <Nav.Link className="text-white text-20 ml-2">Transaction history</Nav.Link>
+                <Nav.Link className="text-white text-20 ml-2">Logout</Nav.Link>
+                <Nav.Link className="text-white text-20 ml-2">Help!</Nav.Link>
+            </Accordion>
 
             <div className="d-flex mobile-link mx-auto justify-content-center">
                 <Image src={AndroidIcon} fluid width={60} height={60} className="mx-2"></Image>
@@ -81,4 +76,4 @@ function sidebar() {
     )
 }
 
-export default sidebar
+export default Sidebar

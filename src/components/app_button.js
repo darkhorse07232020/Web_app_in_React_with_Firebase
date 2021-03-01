@@ -8,7 +8,7 @@ function app_button(props) {
                 <Image src={props.image} className="d-flex" fluid />
             </div>
             <div className="ml-3">
-                <h3 className="text-white m-0 text-20"><b>{props.children}</b></h3>
+                <h3 className="text-white m-0 text-20">{props.children}</h3>
             </div>
         </div>
     )

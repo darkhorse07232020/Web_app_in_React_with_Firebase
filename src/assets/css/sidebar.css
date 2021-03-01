@@ -2,7 +2,6 @@
     height: 100vh !important;
     width: 350px;
     min-width: 350px;
-    border-radius: 0 5rem 5rem 0;
     background-color: #172b4c;
     position: relative;
 }
