@@ -1,7 +1,6 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
-import ReactPlayer from 'react-player/file'
-import IntroVideo from '../assets/videos/intro.mp4'
+import ReactPlayer from 'react-player/youtube'
 
 import { FaPlus } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
@@ -28,7 +27,7 @@ function welcome() {
                 <h2>How to use Pavleu <FaCaretRight /></h2>
                 <h3>This is a text to explain the Video</h3>
                 <div className="pt-5">
-                    <ReactPlayer url={IntroVideo} controls="true" className="m-auto" light="true" playing="true"></ReactPlayer>
+                    <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" controls={true} className="m-auto" light={true} playing={true}></ReactPlayer>
                 </div>
             </div>
         </div>

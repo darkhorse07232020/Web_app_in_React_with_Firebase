@@ -14,33 +14,32 @@ import AndroidIcon from '../assets/images/icons/android_white.png'
 import AppleIcon from '../assets/images/icons/apple_white.png'
 import '../assets/css/sidebar.css'
 import Accordion from '../components/accordion'
+import { Link } from 'react-router-dom'
 
 function Sidebar() {
 
     return (
         <Nav className="d-none d-md-block sidebar p-3 custom-sidebar position-absolute"
-            activeKey="/home"
             // onSelect={selectedKey => alert(`selected ${selectedKey}`)}
         >
             <div className="sidebar-sticky"></div>
             <Container>
                 <Image src={LogoImage} fluid width = "100px" height = "100px" />
             </Container>
-            <Row>
-                <Col md={3}>
-                    <div className="avatar">
-                        <Image src={AvatarImage} fluid roundedCircle className="bg-white"></Image>
-                        <div
-                            className="badge-for-avatar bg-success rounded-circle border border-white"
-                        ></div>
-                    </div>
-                </Col>
-                <Col md={9} className="align-self-center px-0">
-                    <h3 className="text-white"><b>Rachel Frank</b></h3>
-                </Col>
+            <Row className="pl-3">
+                <div className="avatar">
+                    <Image src={AvatarImage} fluid roundedCircle className="bg-white"></Image>
+                    <div
+                        className="badge-for-avatar bg-success rounded-circle border border-white"
+                    ></div>
+                </div>
+                
+                <div className="align-self-center px-2">
+                    <h3 className="text-white m-0" style={{ fontSize: 18 }}>Rachel Frank</h3>
+                </div>
             </Row>
             <Nav.Item>
-                <Nav.Link className="pt-4"><AddButton>Create Task</AddButton></Nav.Link>
+                <Link to="/create" className="pt-3 nav-link"><AddButton>Create Task</AddButton></Link>
             </Nav.Item>
 
             <Accordion title="Active tasks">
@@ -61,10 +60,10 @@ function Sidebar() {
             </Accordion>
 
             <Accordion title="Settings">
-                <Nav.Link className="text-white text-20 ml-2">Edit profile</Nav.Link>
-                <Nav.Link className="text-white text-20 ml-2">Transaction history</Nav.Link>
-                <Nav.Link className="text-white text-20 ml-2">Logout</Nav.Link>
-                <Nav.Link className="text-white text-20 ml-2">Help!</Nav.Link>
+                <Nav.Link className="text-white text-14 ml-2">Edit profile</Nav.Link>
+                <Nav.Link className="text-white text-14 ml-2">Transaction history</Nav.Link>
+                <Nav.Link className="text-white text-14 ml-2">Logout</Nav.Link>
+                <Nav.Link className="text-white text-14 ml-2">Help!</Nav.Link>
             </Accordion>
 
             <div className="d-flex mobile-link mx-auto justify-content-center">

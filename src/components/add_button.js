@@ -9,7 +9,7 @@ function add_button({children}) {
                 <Image src={AddIcon} className="d-flex" fluid />
             </div>
             <div className="add-button-text ml-2">
-                <h3 className="text-white m-0 text-20">{children}</h3>
+                <h3 className="text-white m-0 text-14">{children}</h3>
             </div>
         </div>
     )

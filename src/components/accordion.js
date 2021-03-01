@@ -9,7 +9,7 @@ function Accordion({ title, children }) {
         <>
             <Nav.Item>
                 <Nav.Link className="pt-3" onClick={() => setIsOpen(!isOpen)}>
-                    <TriButton font={20} isRotate={isOpen}>{title}</TriButton>
+                    <TriButton font={16} isRotate={isOpen}>{title}</TriButton>
                 </Nav.Link>
             </Nav.Item>
             {isOpen && children}

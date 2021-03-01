@@ -1,14 +1,14 @@
 .custom-sidebar {
     height: 100vh !important;
-    width: 350px;
-    min-width: 350px;
+    width: 300px;
+    min-width: 300px;
     background-color: #172b4c;
     position: relative;
 }
 
 .custom-sidebar .avatar {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     position: relative;
 }
 
