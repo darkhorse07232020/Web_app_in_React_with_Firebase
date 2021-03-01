@@ -1,6 +1,10 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
+import ReactPlayer from 'react-player/file'
+import IntroVideo from '../assets/videos/intro.mp4'
+
 import { FaPlus } from "react-icons/fa";
+import { FaCaretRight } from "react-icons/fa";
 
 import AvatarImage from '../assets/images/avatar.png'
 
@@ -20,8 +24,12 @@ function welcome() {
                     </div>
                 </div>
             </div>
-            <div className="content-body p-5">
-                <h1>How to use Pavleu</h1>
+            <div className="content-body p-5 text-center">
+                <h2>How to use Pavleu <FaCaretRight /></h2>
+                <h3>This is a text to explain the Video</h3>
+                <div className="pt-5">
+                    <ReactPlayer url={IntroVideo} controls="true" className="m-auto" light="true" playing="true"></ReactPlayer>
+                </div>
             </div>
         </div>
     )

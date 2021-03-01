@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Nav, Image, Container, Row, Col} from 'react-bootstrap'
 import AddButton from '../components/add_button'
-import TriButton from '../components/tri_button'
 import AppButton from '../components/app_button'
 
 import LogoImage from '../assets/images/PavleuLogoYellow.png'
