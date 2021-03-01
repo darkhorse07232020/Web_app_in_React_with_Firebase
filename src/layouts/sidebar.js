@@ -7,7 +7,7 @@ import AppButton from '../components/app_button'
 import LogoImage from '../assets/images/PavleuLogoYellow.png'
 import AvatarImage from '../assets/images/avatar.png'
 import StrataIcon from '../assets/images/icons/catagory_research.png'
-import AudioIcon from '../assets/images/icons/audio_icon.png'
+import AudioIcon from '../assets/images/icons/audio.png'
 import DriveIcon from '../assets/images/icons/drive.png'
 import CalendarIcon from '../assets/images/icons/calendar.png'
 
