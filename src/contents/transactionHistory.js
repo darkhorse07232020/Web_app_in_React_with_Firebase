@@ -16,9 +16,7 @@ function TransactionHistory() {
     useEffect(() => {
         const getTransactionHistory = async () => {
             const data = (await firestore.collection('TransactionHistory').where('userID', '==', "IIcFyqPyBzyTUYfO1ACL").get()).docs;
-            console.log(user.uid);
             setHistories(data);
-            console.log(data[0].data());
         }
 
         getTransactionHistory();
@@ -41,23 +39,25 @@ function TransactionHistory() {
                     </div>
                 </div>
             </div>
-            <div className="content-body p-3 text-center bg-dark transaction-history-body">
-                <div>
-                    <input placeholder="Find transaction" className="w-100"></input>
-                </div>
-                <div className="w-100">
-                    {
-                        histories.map((item, index) => (
-                            <div key={index} className="w-100 d-flex justify-content-between text-20 text-white py-3">
-                                <span>
-                                    {item.data().description}
-                                </span>
-                                <span>
-                                    Amount: {item.data().amount}
-                                </span>
-                            </div>
-                        ))
-                    }
+            <div className="px-1 bg-dark">
+                <div className="content-body p-3 text-center">
+                    <div>
+                        <input placeholder="Find transaction" className="w-100"></input>
+                    </div>
+                    <div className="w-100">
+                        {
+                            histories.map((item, index) => (
+                                <div key={index} className="w-100 d-flex justify-content-between text-20 text-white py-3">
+                                    <span>
+                                        {item.data().description}
+                                    </span>
+                                    <span>
+                                        Amount: {item.data().amount}
+                                    </span>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>
