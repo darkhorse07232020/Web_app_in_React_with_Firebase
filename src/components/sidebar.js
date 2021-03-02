@@ -1,10 +1,15 @@
-import React from 'react'
-import {Nav, Image, Container, Row} from 'react-bootstrap'
+import React, {useContext} from 'react'
+import {Nav, Image, Row} from 'react-bootstrap'
 import AddButton from './add_button'
 import AppButton from './app_button'
 
+import Accordion from './accordion'
+import { Link, Redirect } from 'react-router-dom'
+import { UserContext } from '../providers/UserProvider'
+import { signOut } from '../firebase'
+
 import LogoImage from '../assets/images/PavleuLogoYellow.png'
-import AvatarImage from '../assets/images/avatar.png'
+import AvatarImage from '../assets/images/icons/normal_avatar.png'
 import StrataIcon from '../assets/images/icons/catagory_research.png'
 import AudioIcon from '../assets/images/icons/audio.png'
 import DriveIcon from '../assets/images/icons/drive.png'
@@ -13,29 +18,33 @@ import CalendarIcon from '../assets/images/icons/calendar.png'
 import AndroidIcon from '../assets/images/icons/android_white.png'
 import AppleIcon from '../assets/images/icons/apple_white.png'
 import '../assets/css/sidebar.css'
-import Accordion from './accordion'
-import { Link } from 'react-router-dom'
 
 function Sidebar() {
-
+    const user = useContext(UserContext);
     return (
         <Nav className="d-none d-md-block sidebar p-3 custom-sidebar position-absolute"
             // onSelect={selectedKey => alert(`selected ${selectedKey}`)}
         >
             <div className="sidebar-sticky"></div>
             <div className="py-4 px-3">
-                <Image src={LogoImage} fluid width = "100px" height = "100px" />
+                <Link to="/">
+                    <Image src={LogoImage} fluid width = "100px" height = "100px" />
+                </Link>
             </div>
             <Row className="pl-3 pb-2">
-                <div className="avatar">
-                    <Image src={AvatarImage} fluid roundedCircle className="bg-white"></Image>
+                <div className="avatar d-flex">
+                    <Image
+                        src={user.avatarUrl ? user.avatarUrl : AvatarImage}
+                        fluid roundedCircle className="bg-white"
+                        height={35} width={35} 
+                    />
                     <div
                         className="badge-for-avatar bg-success rounded-circle border border-white"
                     ></div>
                 </div>
                 
                 <div className="align-self-center px-2">
-                    <h3 className="text-white m-0" style={{ fontSize: 18 }}>Rachel Frank</h3>
+                    <h3 className="text-white m-0" style={{ fontSize: 18 }}>{user.name}</h3>
                 </div>
             </Row>
             <Nav.Item>
@@ -62,7 +71,7 @@ function Sidebar() {
             <Accordion title="Settings">
                 <Nav.Link className="text-white text-14 ml-2">Edit profile</Nav.Link>
                 <Nav.Link className="text-white text-14 ml-2">Transaction history</Nav.Link>
-                <Nav.Link className="text-white text-14 ml-2">Logout</Nav.Link>
+                <Nav.Link className="text-white text-14 ml-2" onClick={signOut}>Logout</Nav.Link>
                 <Nav.Link className="text-white text-14 ml-2">Help!</Nav.Link>
             </Accordion>
 

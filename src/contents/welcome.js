@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Image } from 'react-bootstrap'
 import ReactPlayer from 'react-player/youtube'
+import { UserContext } from '../providers/UserProvider'
 
 import { FaPlus } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
 
-import AvatarImage from '../assets/images/avatar.png'
+import AvatarImage from '../assets/images/icons/normal_avatar.png'
 
-function welcome() {
+function Welcome() {
+    const user = useContext(UserContext);
     return (
         <div className="w-100">
             <div className="header welcome-header align-items-center d-flex">
                 <div className="position-absolute header-users d-flex">
-                    <div className="header-avatar position-relative">
-                        <Image src={AvatarImage} fluid className="header-avatar bg-white"></Image>
+                    <div className="header-avatar position-relative d-flex">
+                        <Image
+                            src={user.avatarUrl ? user.avatarUrl : AvatarImage} width={30} height={30}
+                            fluid className="header-avatar bg-white" />
                         <div
                             className="badge-for-avatar bg-success rounded-circle border border-white"
                         ></div>
@@ -34,4 +38,4 @@ function welcome() {
     )
 }
 
-export default welcome
+export default Welcome
