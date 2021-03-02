@@ -24,7 +24,8 @@ code {
   background-color: #96cdf6;
 }
 .content-body {
-  margin-left: 350px;
+  margin-left: 300px;
+  height: calc(100vh - 50px);
 }
 
 .header-users {
@@ -46,4 +47,9 @@ code {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.chat-header {
+  background-color: #245b84;
+  padding-left: 360px;
 }
