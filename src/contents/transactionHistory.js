@@ -15,7 +15,7 @@ function TransactionHistory() {
 
     useEffect(() => {
         const getTransactionHistory = async () => {
-            const data = (await firestore.collection('TransactionHistory').where('userID', '==', "IIcFyqPyBzyTUYfO1ACL").get()).docs;
+            const data = (await firestore.collection('TransactionHistory').where('userID', '==', user.uid).get()).docs;
             setHistories(data);
         }
 

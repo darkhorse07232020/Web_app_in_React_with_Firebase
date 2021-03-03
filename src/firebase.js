@@ -51,10 +51,11 @@ export const signOut = () => {
 export const getUserDocument = async uid => {
     if (!uid) return null;
     try {
-        const userDocument = await firestore.collection(`Users`).where("uid", "==", "pfXFWl7SQdWE77DOsSeLyxVHdpr2").get();
+        const userDocument = await firestore.collection(`Users`).where("uid", "==", uid).get();
+        const userInfo = userDocument.docs.length ? userDocument.docs[0].data() : null;
         return {
             uid,
-            ...userDocument.docs[0].data()
+            ...userInfo
         };
     } catch (error) {
         console.error("Error fetching user", error);
