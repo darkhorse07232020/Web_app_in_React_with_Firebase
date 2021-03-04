@@ -7,6 +7,7 @@ import LoginRoute from './routes/loginRoute';
 import Welcome from './contents/welcome';
 import UserProvider from './providers/UserProvider';
 import TransactionHistory from './contents/transactionHistory';
+import EditProfile from './contents/editProfile';
 
 function App() {
   const user = null;
@@ -27,6 +28,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/transaction_history">
               <TransactionHistory />
+            </PrivateRoute>
+            <PrivateRoute path="/edit_profile">
+              <EditProfile />
             </PrivateRoute>
           </Switch>
         </Router>

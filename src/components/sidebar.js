@@ -69,7 +69,7 @@ function Sidebar() {
             </Accordion>
 
             <Accordion title="Settings">
-                <Nav.Link className="text-white text-14 ml-2">Edit profile</Nav.Link>
+                <Link to="/edit_profile" className="text-white text-14 ml-2 nav-link">Edit profile</Link>
                 <Link to="/transaction_history" className="text-white text-14 ml-2 nav-link">Transaction history</Link>
                 <Nav.Link className="text-white text-14 ml-2" onClick={signOut}>Logout</Nav.Link>
                 <Nav.Link className="text-white text-14 ml-2">Help!</Nav.Link>
