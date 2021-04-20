@@ -3,14 +3,14 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBo02jicEzVelRdkBA0dJCIxXBv1psHHfc",
-    authDomain: "pavleu1.firebaseapp.com",
-    databaseURL: "https://pavleu1.firebaseio.com",
+    apiKey: "Your Key",
+    authDomain: "Your Domain",
+    databaseURL: "Your URL",
     projectId: "pavleu1",
-    storageBucket: "pavleu1.appspot.com",
-    messagingSenderId: "119966468084",
-    appId: "1:119966468084:web:3584d4b352307d16195ba1",
-    measurementId: "G-MTENSR02T6"
+    storageBucket: "Your Bucket",
+    messagingSenderId: "Your Sender Id",
+    appId: "Your AppID",
+    measurementId: "Your MeasurementId"
 };
 
 firebase.initializeApp(firebaseConfig);
